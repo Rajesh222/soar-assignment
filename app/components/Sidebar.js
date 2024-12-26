@@ -15,10 +15,8 @@ import settingsImg from "../assets/settings.png";
 import transactionImg from "../assets/transaction.png";
 import Link from "next/link";
 
-const Sidebar = ({handleItemClick, activeItem}) => {
+const Sidebar = ({ handleItemClick, activeItem }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
-
 
   return (
     <div className="fixed top-0 left-0 sm:h-full w-30 sm:w-64 transition-width duration-300 bg-white p-4">

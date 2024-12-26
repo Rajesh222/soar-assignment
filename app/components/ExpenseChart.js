@@ -5,31 +5,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ExpenseChart = () => {
-  const data = {
-    labels: ["Entertainment", "Bill Expense", "Investment", "Others"],
-    datasets: [
-      {
-        label: "Expense Distribution",
-        data: [30, 15, 20, 35],
-        backgroundColor: [
-          "#2C3E50", // Entertainment
-          "#E67E22", // Bill Expense
-          "#357EDD", // Investment
-          "#1C1C1C", // Others
-        ],
-        borderWidth: 2,
-        borderColor: "#fff",
-        hoverOffset: 6,
-        borderJoinStyle: "square",
-        rotation: -90,
-        circumference: 360,
-        shadowColor: "rgba(0, 0, 0, 0.2)",
-        shadowBlur: 10,
-      },
-    ],
-  };
-
+const ExpenseChart = ({ expense }) => {
   const options = {
     plugins: {
       legend: {
@@ -50,10 +26,12 @@ const ExpenseChart = () => {
 
   return (
     <div>
-      <h2 className="text-lg font-semibold text-gray-800 mb-4">Expense Statistics</h2>
+      <h2 className="text-lg font-semibold text-gray-800 mb-4">
+        Expense Statistics
+      </h2>
       <div className="p-6 bg-white rounded-lg shadow-lg">
         <div className="h-[300px]">
-          <Pie data={data} options={options} />
+          <Pie data={expense} options={options} />
         </div>
       </div>
     </div>

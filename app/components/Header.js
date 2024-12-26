@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React from "react";
 import userImg from "../assets/userImage.jpg";
 import notificationImg from "../assets/notification.png";
@@ -7,7 +6,7 @@ import settingsImg from "../assets/settings_1.png";
 
 import Image from "next/image";
 
-const Header = ({activeItem}) => {
+const Header = ({ activeItem }) => {
   return (
     <>
       <div className="sm:ml-64 ml-16 flex items-center justify-between p-4 bg-white">

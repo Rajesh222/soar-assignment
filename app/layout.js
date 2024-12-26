@@ -1,5 +1,7 @@
-"use client"
+"use client";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Provider } from 'react-redux';
+import store from './store';
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
@@ -25,14 +27,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Provider store={store}>
         <div className="flex">
-          <Sidebar handleItemClick={handleItemClick} activeItem={activeItem} setActiveItem={setActiveItem}/>
+          <Sidebar
+            handleItemClick={handleItemClick}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+          />
 
           <div className="sm:ml-[2px] bg-gray-100 min-h-screen flex-1">
-            <Header activeItem={activeItem}/>
+            <Header activeItem={activeItem} />
             {children}
           </div>
         </div>
+        </Provider>
       </body>
     </html>
   );

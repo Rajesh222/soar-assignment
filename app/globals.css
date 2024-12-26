@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.rotate-135 {
+  @apply transform rotate-[135deg];
+}
+
+.rotate-315 {
+  @apply transform rotate-[315deg];
+}

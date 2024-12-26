@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import userImg from "../assets/userImage.jpg";
 import Image from "next/image";
-
 
 const Setting = () => {
   // State to manage form inputs
@@ -182,7 +181,7 @@ const Setting = () => {
           <div className="mt-6 flex justify-end">
             <button
               type="submit"
-              className="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 focus:ring focus:ring-gray-300"
+              className="w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 focus:ring focus:ring-gray-300"
             >
               Save
             </button>
