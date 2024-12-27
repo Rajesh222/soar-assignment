@@ -1,4 +1,4 @@
-This is a assignment
+This is an assignment
 
 To run locally, Please checkout the code from master branch and run below command
 
