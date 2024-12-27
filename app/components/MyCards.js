@@ -16,18 +16,15 @@ const MyCards = ({ cards }) => {
         </a>
       </div>
 
-      <div className="h-[300px]">
-        <div
-          className="xl:grid xl:grid-cols-2 gap-4 flex overflow-x-auto xl:overflow-hidden"
-          style={{ width: "100%" }}
-        >
+      <div className="h-[270px]">
+        <div className="gap-4 flex overflow-x-auto" style={{ width: "100%" }}>
           {cards.map((card, index) => {
             return (
               <div key={card.id}>
                 {index === 0 ? (
                   <div
                     className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-xl shadow-lg relative"
-                    style={{ minWidth: "300px" }}
+                    style={{ minWidth: "390px" }}
                   >
                     <div className="flex justify-between pl-6 pt-6 pr-6 mb-6">
                       <div>
@@ -68,7 +65,7 @@ const MyCards = ({ cards }) => {
                 ) : (
                   <div
                     className="bg-white text-gray-800 rounded-xl shadow-md border "
-                    style={{ minWidth: "300px" }}
+                    style={{ minWidth: "390px" }}
                   >
                     <div className="flex justify-between p-6">
                       <div>

@@ -84,6 +84,14 @@ export const fetchData = createAsyncThunk("data/fetchData", async () => {
         cardNumber: "3778 **** **** 3763",
         cardType: "master_card",
       },
+      {
+        id: 3,
+        balance: 5756,
+        cardHolder: "Jhon Doe",
+        validThru: "02/24",
+        cardNumber: "3778 **** **** 5678",
+        cardType: "master_card",
+      },
     ],
     transactions: [
       {

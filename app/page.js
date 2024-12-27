@@ -8,17 +8,17 @@ import BalanceHistoryChart from "./components/BalanceHistoryChart";
 import MyCards from "./components/MyCards";
 import RecentTransactions from "./components/RecentTransactions";
 import { useEffect } from "react";
+import Loader from "./components/Loader";
 
 export default function Dashboard() {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.data);
-  console.log("data:", data);
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {
@@ -37,7 +37,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="sm:ml-64 grid grid-cols-1 lg:grid-cols-3 gap-6 pl-6 pr-6 pb-6">
+          <div className="sm:ml-64 grid grid-cols-1 lg:grid-cols-3 gap-6 pl-6 pr-6 pt-6">
             <div className="col-span-1 lg:col-span-2">
               <WeeklyActivityChart weeklyActivity={data.weeklyActivity} />
             </div>
