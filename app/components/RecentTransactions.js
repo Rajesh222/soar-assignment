@@ -9,7 +9,7 @@ const RecentTransactions = ({ transactions }) => {
       </h2>
 
       {/* Transaction List */}
-      <div className="h-[240px] space-y-4 p-6 bg-white rounded-lg shadow-md sm:w-96 overflow-y-auto whitespace-nowrap">
+      <div className="h-[240px] space-y-4 p-6 bg-white rounded-lg shadow-md overflow-y-auto whitespace-nowrap">
         {transactions.map((transaction) => (
           <div key={transaction.id} className="flex items-center gap-4">
             {/* Icon */}

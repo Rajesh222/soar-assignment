@@ -18,7 +18,7 @@ const MyCards = ({ cards }) => {
 
       <div className="h-[300px]">
         <div
-          className="md:grid md:grid-cols-2 gap-4 flex overflow-x-auto md:overflow-hidden"
+          className="xl:grid xl:grid-cols-2 gap-4 flex overflow-x-auto xl:overflow-hidden"
           style={{ width: "100%" }}
         >
           {cards.map((card, index) => {

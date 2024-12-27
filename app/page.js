@@ -28,17 +28,17 @@ export default function Dashboard() {
     <>
       {data ? (
         <div>
-          <div className="sm:ml-64 grid grid-cols-1 md:grid-cols-3 gap-6 pl-6 pr-6 pt-6">
-            <div className="col-span-1 sm:col-span-2">
+          <div className="sm:ml-64 grid grid-cols-1 lg:grid-cols-3 gap-6 pl-6 pr-6 pt-6">
+            <div className="col-span-1 lg:col-span-2">
               <MyCards cards={data.cards} />
             </div>
-            <div className="col-span-1 sm:col-span-1">
+            <div className="col-span-1 lg:col-span-1">
               <RecentTransactions transactions={data.transactions} />
             </div>
           </div>
 
-          <div className="sm:ml-64 grid grid-cols-1 md:grid-cols-3 gap-6 pl-6 pr-6 pb-6">
-            <div className="col-span-1 sm:col-span-2">
+          <div className="sm:ml-64 grid grid-cols-1 lg:grid-cols-3 gap-6 pl-6 pr-6 pb-6">
+            <div className="col-span-1 lg:col-span-2">
               <WeeklyActivityChart weeklyActivity={data.weeklyActivity} />
             </div>
             <div className="col-span-1">
@@ -46,11 +46,11 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="sm:ml-64 grid grid-cols-1 md:grid-cols-12 gap-6 p-6">
-            <div className="sm:col-span-5 col-span-12">
+          <div className="sm:ml-64 grid grid-cols-1 lg:grid-cols-12 gap-6 p-6">
+            <div className="lg:col-span-5 col-span-12">
               <QuickTransfer quickTransferData={data.quickTransferData} />
             </div>
-            <div className="sm:col-span-7 col-span-12">
+            <div className="lg:col-span-7 col-span-12">
               <BalanceHistoryChart balanceHistory={data.balanceHistory} />
             </div>
           </div>
