@@ -18,6 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 I have deployed the code to vercel, Below is link to access the app
 
-https://soar-assignment-gw6svl2lw-rajesh-kumars-projects-a695ddca.vercel.app/
+https://soar-assignment-ma11-g3pr2lkzt-rajesh-kumars-projects-a695ddca.vercel.app/
 
 
