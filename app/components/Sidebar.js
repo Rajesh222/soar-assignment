@@ -19,7 +19,7 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 sm:h-full w-30 sm:w-64 transition-width duration-300 bg-white p-4">
+    <div className="fixed top-0 left-0 sm:h-full w-30 sm:w-64 transition-width duration-300 bg-white p-4 siderbar">
       <Link href="/">
         <div className={`flex items-center p-4 hidden sm:flex`}>
           <Image src={logoImg} alt="Investment" width={24} height={24} />
@@ -39,14 +39,23 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
               className={`flex items-center p-4 hover:bg-gray-100 cursor-pointer ${
                 activeItem === "Dashboard" ? "bg-gray-200 rounded-2xl" : ""
               }`}
-              onClick={() => handleItemClick("Dashboard")}
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
             >
               <Image src={homeImg} alt="Investment" width={24} height={24} />
               <span className="ml-4 sm:block">Dashboard</span>
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image
                 src={transactionImg}
                 alt="Investment"
@@ -57,13 +66,25 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image src={userImg} alt="Investment" width={24} height={24} />
               <span className="ml-4 sm:block">Accounts</span>
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image
                 src={investmentImg}
                 alt="Investment"
@@ -74,7 +95,13 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image
                 src={creditCardImg}
                 alt="Investment"
@@ -85,19 +112,37 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image src={loanImg} alt="Investment" width={24} height={24} />
               <span className="ml-4 sm:block">Loans</span>
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image src={serviceImg} alt="Investment" width={24} height={24} />
               <span className="ml-4 sm:block">Services</span>
             </li>
           </Link>
           <Link href="/">
-            <li className="flex items-center p-4 hover:bg-gray-100 cursor-pointer">
+            <li
+              className="flex items-center p-4 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                handleItemClick("Dashboard");
+                setIsOpen(false);
+              }}
+            >
               <Image
                 src={privillageImg}
                 alt="Investment"
@@ -112,7 +157,10 @@ const Sidebar = ({ handleItemClick, activeItem }) => {
               className={`flex items-center p-4 hover:bg-gray-100 cursor-pointer ${
                 activeItem === "Setting" ? "bg-gray-200 rounded-2xl" : ""
               }`}
-              onClick={() => handleItemClick("Setting")}
+              onClick={() => {
+                handleItemClick("Setting");
+                setIsOpen(false);
+              }}
             >
               <Image
                 src={settingsImg}
